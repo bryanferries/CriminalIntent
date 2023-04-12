@@ -17,12 +17,12 @@ class CrimeFragment : Fragment() {
     private lateinit var titleField: EditText
     private lateinit var dateButton: Button
     private lateinit var solvedCheckBox: CheckBox
-
+//Declare vars for components and Crime objects
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         crime = Crime()
     }
-
+//Call the onCreate superclass and set crime equal to Crime() constructor
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -33,7 +33,7 @@ class CrimeFragment : Fragment() {
         titleField = view.findViewById(R.id.crime_title) as EditText
         dateButton = view.findViewById(R.id.crime_date) as Button
         solvedCheckBox = view.findViewById(R.id.crime_solved) as CheckBox
-
+//Inflate necessary components
 
         dateButton.apply {
             text = crime.date.toString()
@@ -65,7 +65,7 @@ class CrimeFragment : Fragment() {
             ) {
                 crime.title = sequence.toString()
             }
-
+//The parts of the crime fragment
             override fun afterTextChanged(sequence: Editable?) {
 
             }

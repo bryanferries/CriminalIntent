@@ -8,10 +8,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+//Set up your fragment manager and activity settings for dealing with the fragments
         val currentFragment =
             supportFragmentManager.findFragmentById(R.id.fragment_container)
-
         if (currentFragment == null) {
             val fragment = CrimeFragment()
             supportFragmentManager
@@ -21,4 +20,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-//is it pushing
